@@ -1,0 +1,103 @@
+.App {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+.navbar-nav button {
+  color: #6AA8FF;
+  border: transparent;
+  background-color: black;
+  font-weight: 800;
+  padding-top: 6px;
+  font-size: larger;
+  border-radius: 10px;
+}
+.mainCon {
+  background: url(../src/img/grass-luxury-beach-resort-travel.jpg) no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  opacity: 90%;
+}
+.mainDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.sideFooter {
+  background-color: white;
+ padding: 0;
+ margin: 0;
+ width: 4rem !important;
+ font-weight: 600;
+ font-size: large;
+}
+.mail {
+  writing-mode:vertical-lr;
+  text-orientation:mixed;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  padding: 2rem 0;
+}
+
+.socials {
+  writing-mode:vertical-lr;
+  text-orientation:mixed;
+  padding: 2rem 9px;
+  font-size: 20px;
+}
+
+.writeup {
+  padding: 3rem;
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.writeup h5 {
+  font-size: 30px;
+}
+
+.writeup p {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.footerDiv {
+ background-color: white;
+  margin-left: 20%;
+text-align: center;
+font-weight: 500;
+border-radius: 1rem;
+}
+
+.duration button {
+  border: transparent;
+  background-color: transparent;
+  margin: 0;
+  font-size: larger;
+  padding-bottom: 1rem;
+}
+
+.footerDiv .col-3{
+  padding: 1rem;
+}
+
+.footerDiv .col-6 p {
+  padding-top: 1rem;
+  margin: 0;
+  text-align: left;
+}
+
+.footerDiv .col-6 input {
+  margin-left: 6rem;
+  margin-bottom: 1rem;
+  background-color: black;
+  color: #6AA8FF;
+  border: transparent;
+  font-weight: 600;
+  border-radius: 10px;
+}
