@@ -1,7 +1,7 @@
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 import { TiSocialFacebook, TiSocialInstagram, TiSocialLinkedin  } from "react-icons/ti"
-import Rooms from "./rooms";
+
 
 const Home = () => {
   return (
@@ -25,7 +25,7 @@ const Home = () => {
           Let nature soothe your soul
           </p>
         </div>
-        <Rooms />
+        
         </div>
         <div className="row">
           <div className="col-1 sideFooter"></div>

@@ -37,7 +37,7 @@ setCount(count + 1)
       </div>
       <div className="col-3">
         <label for="checkin">Check In</label>
-        <input type="date" id="date" name="checkin" />
+        <input type="date" id="checkin" name="checkin" />
       </div>
       <div className="col-6 duration">
         <p>Number Of Nights</p>
