@@ -9,7 +9,7 @@ const RoomCard = ({room}) => {
             <p className="card-text"> ${room.price}/night</p>
             <p className="card-text"> {room.type}</p>
             <p className="card-text"> {room.description}</p>
-            <a href="./booking" className="btn btn-primary">Book Now</a>
+            <a href="##" className="btn btn-primary">Book Now</a>
           </div>
         </div>
         

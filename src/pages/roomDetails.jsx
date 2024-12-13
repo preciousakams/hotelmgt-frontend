@@ -6,10 +6,10 @@ const RoomDetails =({match}) => {
   const [room, setRoom] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/rooms/${match.params.id}`)
+    fetch(`https://hotelmgt-backend.onrender.com/rooms${match.params._id}`)
     .then((res) => res.json())
     .then((data) => setRoom(data))
-  }, [match.params.id])
+  }, [match.params._id])
   if(!room) return <p>Loading...</p>
 
 return (
@@ -18,7 +18,7 @@ return (
     <img src={room.image} alt={room.name} />
     <p>{room.description}</p>
     <p>Price: ${room.price}/night</p>
-    <Booking roomId = {room.id} />
+    <Booking roomId = {room._id} />
   </div>
 )
 }

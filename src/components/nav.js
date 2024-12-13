@@ -22,14 +22,9 @@ const Nav = () => {
           <a className="nav-link" href="./rooms">Rooms</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="./suites">Suites</a>
+          <a className="nav-link" href="./suites">About Us</a>
         </li>
-        {/* <li className="nav-item">
-          <a className="nav-link" href="./resturant">Resturant</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="##">Offers</a>
-        </li> */}
+    
         <li className="nav-item">
           <a className="nav-link" href="./contact">Contact</a>
         </li>
@@ -37,10 +32,6 @@ const Nav = () => {
           <button onClick={booking}>Book Now</button>
         </li>
       </ul>
-      {/* <form className="d-flex">
-        <input className="form-control me-2" type="text" placeholder="Search" />
-        <button className="btn btn-primary" type="button">Search</button>
-      </form> */}
     </div>
   </div>
 </nav>
