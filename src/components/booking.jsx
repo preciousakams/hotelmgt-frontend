@@ -28,7 +28,7 @@ const Booking = ({roomId}) => {
         placeholder="Your Email"
         onChange={handleChange}
       />
-      <button type="submit">Book Now</button>
+      <button type="submit" className="bookNowBtn">Book Now</button>
     </form>
   )
 }

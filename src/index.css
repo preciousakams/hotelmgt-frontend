@@ -4,7 +4,8 @@
   overflow: hidden;
   height: 100vh;
 }
-.navbar-nav button {
+.navbar-nav button,
+.bookNowBtn {
   color: #6AA8FF;
   border: transparent;
   background-color: black;
@@ -109,4 +110,20 @@ border-radius: 1rem;
 
 .list-group-item {
   border: transparent !important;
+}
+
+.detailsDiv {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border: transparent;
+}
+
+.detailsDiv img {
+ padding: 6%;
+ height: 36rem;
+}
+
+.detailsDiv strong {
+  color: #6AA8FF;
 }

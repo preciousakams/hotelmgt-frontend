@@ -1,25 +1,39 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Booking from "../components/booking";
+import Nav from "../components/nav";
 
-const RoomDetails =({match}) => {
-
+const RoomDetails =() => {
+  const {id} = useParams();
   const [room, setRoom] = useState(null);
 
   useEffect(() => {
-    fetch(`https://hotelmgt-backend.onrender.com/rooms${match.params._id}`)
+    fetch(`https://hotelmgt-backend.onrender.com/rooms/${id}`)
     .then((res) => res.json())
     .then((data) => setRoom(data))
-  }, [match.params._id])
-  if(!room) return <p>Loading...</p>
+  }, [id])
+  if(!room) return <>
+  <Nav />
+  <p>Loading Room Details...</p>
+  </>;
 
 return (
-  <div>
-    <h1> {room.name} </h1>
-    <img src={room.image} alt={room.name} />
-    <p>{room.description}</p>
-    <p>Price: ${room.price}/night</p>
-    <Booking roomId = {room._id} />
-  </div>
+  <>
+  <Nav />
+  
+  <div className="card detailsDiv">
+          <img src={room.image} alt={room.name}className="card-img-top col-8" />
+         
+          <div className="card-body row">
+            
+            <h5 className="card-title col"><strong> Name:</strong> {room.name}</h5>
+            <p className="card-text col"> <strong>Price:</strong> ${room.price}/night</p>
+            <p className="card-text col"><strong> Room Type: </strong>{room.type} </p>
+            <p className="card-text col-12">{room.description} </p>
+            <Booking roomId = {room._id} />
+          </div>
+        </div>
+  </>
 )
 }
 

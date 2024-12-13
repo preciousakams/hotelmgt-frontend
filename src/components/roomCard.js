@@ -1,5 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 
 const RoomCard = ({room}) => {
+  const navigate = useNavigate();
+
+  const roomDetailsNav = () => {
+    navigate(`/rooms/${room._id}`);
+  }
   return (
     <>
         <div className="col-4 list-group-item card" style={{width: "18rem"}}>
@@ -9,7 +15,7 @@ const RoomCard = ({room}) => {
             <p className="card-text"> ${room.price}/night</p>
             <p className="card-text"> {room.type}</p>
             <p className="card-text"> {room.description}</p>
-            <a href="##" className="btn btn-primary">Book Now</a>
+            <button onClick={roomDetailsNav} className="btn btn-primary">Book Now</button>
           </div>
         </div>
         
