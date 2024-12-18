@@ -16,7 +16,9 @@ const Nav = () => {
   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
       <span className="navbar-toggler-icon"></span>
     </button>
-    <a className="navbar-brand" href="/">Wonder Hotels</a>
+    <a className="navbar-brand" href="/">
+    <img src="/src/img/hotellogo.png" alt="hotel logo" />
+    </a>
     
     <div className="collapse navbar-collapse" id="mynavbar">
       <ul className="navbar-nav ms-auto">

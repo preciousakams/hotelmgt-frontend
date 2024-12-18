@@ -8,7 +8,7 @@ const Rooms = () => {
   const [filteredRooms, setFilteredRooms] = useState([])
 
   useEffect(() => {
-    fetch('https://hotelmgt-backend.onrender.com/rooms')
+    fetch('http://localhost:5000/rooms/available')
     .then((res) => res.json())
     .then((data) => {
       setRooms(data);

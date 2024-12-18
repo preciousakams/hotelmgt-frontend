@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Booking from "../components/booking";
+import Booking from "../pages/booking";
 import Nav from "../components/nav";
 
 const RoomDetails =() => {

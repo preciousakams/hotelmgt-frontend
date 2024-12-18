@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const BookingForm = ({ room }) => {
   const [customerName, setCustomerName] = useState('');
@@ -9,19 +9,26 @@ const BookingForm = ({ room }) => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
-  const calculateTotalPrice = () => {
-    const checkInDate = new Date(checkIn);
-    const checkOutDate = new Date(checkOut);
-    const nights = (checkOutDate - checkInDate) / (1000 * 60 * 60 * 24);
-    setTotalPrice(nights * room.price);
-  };
+  // Function to calculate total price dynamically
+  useEffect(() => {
+    if (checkIn && checkOut) {
+      const checkInDate = new Date(checkIn);
+      const checkOutDate = new Date(checkOut);
+
+      if (checkOutDate > checkInDate) {
+        const nights = (checkOutDate - checkInDate) / (1000 * 60 * 60 * 24);
+        setTotalPrice(nights * room.price);
+      } else {
+        setTotalPrice(0);
+      }
+    }
+  }, [checkIn, checkOut, room.price]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    calculateTotalPrice();
 
     const bookingData = {
-      roomId: room.id,
+      roomId: room._id,
       customerName,
       email,
       checkIn,
@@ -30,7 +37,7 @@ const BookingForm = ({ room }) => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/bookings', {
+      const response = await fetch('http://localhost:5000/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,13 +59,18 @@ const BookingForm = ({ room }) => {
   };
 
   return (
-    <div>
-      <h2>Book {room.name}</h2>
+    <div className='bookingForm container'>
+      <h3> <strong>Selected Room:</strong> {room.name}</h3>
+      <h3> <strong>Room Type:</strong> {room.type}</h3>
+      
       {success && <p style={{ color: 'green' }}>Booking successful!</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
+      <div className='bookingFormDiv'>
+  
       <form onSubmit={handleSubmit}>
+        
         <div>
-          <label>Name:</label>
+          <label><strong>Customer's Name: </strong></label>
           <input
             type="text"
             value={customerName}
@@ -66,8 +78,10 @@ const BookingForm = ({ room }) => {
             required
           />
         </div>
+        
+        {/* Email */}
         <div>
-          <label>Email:</label>
+          <label><strong> Customer's Email: </strong></label>
           <input
             type="email"
             value={email}
@@ -75,8 +89,10 @@ const BookingForm = ({ room }) => {
             required
           />
         </div>
+        
+        {/* Check-In */}
         <div>
-          <label>Check-In:</label>
+          <label><strong>Check-In Date: </strong></label>
           <input
             type="date"
             value={checkIn}
@@ -84,8 +100,10 @@ const BookingForm = ({ room }) => {
             required
           />
         </div>
+        
+        {/* Check-Out */}
         <div>
-          <label>Check-Out:</label>
+          <label><strong>Check-Out Date: </strong></label>
           <input
             type="date"
             value={checkOut}
@@ -93,11 +111,18 @@ const BookingForm = ({ room }) => {
             required
           />
         </div>
+        
+        {/* Total Price */}
         <div>
-          <p>Total Price: ${totalPrice}</p>
+          <p><strong>Total Price: ${totalPrice}</strong></p>
         </div>
-        <button type="submit">Confirm Booking</button>
+        
+        {/* Submit Button */}
+        <button type="submit" disabled={!totalPrice} className='bookNowBtn'>
+          Confirm Booking
+        </button>
       </form>
+      </div>
     </div>
   );
 };

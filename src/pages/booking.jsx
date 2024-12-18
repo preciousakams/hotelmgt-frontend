@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import BookingForm from '../components/bookingForm';
+import Nav from '../components/nav';
 
 const BookingPage = () => {
   const location = useLocation();
@@ -14,7 +15,8 @@ const BookingPage = () => {
 
   return (
     <div>
-      <h1>Booking Page</h1>
+      <Nav />
+     
       <BookingForm room={room} />
     </div>
   );
