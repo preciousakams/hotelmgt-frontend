@@ -1,10 +1,12 @@
-import Booking from "./booking";
+import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
+  const navigate = useNavigate();
+
 
   const booking = () => {
     // redirect to the booking form <
-    <Booking />
+    navigate('/booking')
   }
 
 

@@ -3,6 +3,7 @@ import Home from "./pages/home"
 import Rooms from './pages/rooms';
 import RoomDetails from './pages/roomDetails';
 import Contact from './pages/contact';
+import Booking from './pages/booking';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path='/rooms/:id' element={<RoomDetails/>} />
         {/* <Route path='/admin' Component={AdminDash} /> */}
         <Route path='/contact' element={<Contact />} />
+        <Route path='/booking' element={<Booking />} />
       </Routes>
     </Router>
   );
