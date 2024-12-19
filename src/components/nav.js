@@ -1,14 +1,5 @@
-import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
-  const navigate = useNavigate();
-
-
-  const booking = () => {
-    // redirect to the booking form <
-    navigate('/booking')
-  }
-
 
   return (
     <nav className="navbar navbar-expand-sm navbar-light bg-light">
@@ -17,7 +8,7 @@ const Nav = () => {
       <span className="navbar-toggler-icon"></span>
     </button>
     <a className="navbar-brand" href="/">
-    <img src="/src/img/hotellogo.png" alt="hotel logo" />
+    <img src="https://res.cloudinary.com/wonderwoman/image/upload/v1734532930/myportfolio/wonderHotels/hotel-logo_t1qnac.jpg" alt='Wonder Hotels' />
     </a>
     
     <div className="collapse navbar-collapse" id="mynavbar">
@@ -26,14 +17,11 @@ const Nav = () => {
           <a className="nav-link" href="./rooms">Rooms</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="./suites">About Us</a>
+          <a className="nav-link" href="./#">About Us</a>
         </li>
     
         <li className="nav-item">
-          <a className="nav-link" href="./contact">Contact</a>
-        </li>
-        <li className="nav-item">
-          <button onClick={booking}>Book Now</button>
+          <a className="nav-link" href="./#">Contact</a>
         </li>
       </ul>
     </div>

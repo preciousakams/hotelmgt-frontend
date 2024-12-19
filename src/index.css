@@ -1,7 +1,7 @@
 .App {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100vh;
 }
 .navbar-nav button,
@@ -19,6 +19,26 @@
   background-size: 100% 100%;
   height: 100%;
   opacity: 90%;
+}
+
+.carousel {
+  display: inline-flex;
+  /* margin: 0 0 30% 35% ; */
+  height: 220px !important;
+  width: 420px !important;
+  margin-bottom: 24rem !important;
+  border: solid ;
+}
+
+.carousel-item {
+  /* display: flex;
+  justify-content: center; */
+border: solid chartreuse;
+}
+
+.carousel-item img{
+  width: auto;
+  height: auto;
 }
 .mainDiv {
   display: flex;
@@ -53,9 +73,20 @@
 
 .writeup {
   padding: 3rem;
-  color: white;
+  color: black;
   text-transform: capitalize;
   text-align: center;
+}
+
+.writeup h5,
+.writeup p {
+  display:inline-flex;
+  background: url('../src/img/text-bg.png');
+  /* background-color: white; */
+  opacity: 70%;
+  /* /* background: #4e96f5; */
+  border-radius: 33px;
+  
 }
 
 .writeup h5 {
@@ -67,33 +98,33 @@
   font-style: italic;
 }
 
-.footerDiv {
+.footerFormDiv {
  background-color: white;
-  margin-left: 20%;
+  /* margin-left: 20%; */
 text-align: center;
 font-weight: 500;
 border-radius: 1rem;
 }
 
-.duration button {
+/* .duration button {
   border: transparent;
-  background-color: transparent;
+  background-color: purple;
   margin: 0;
   font-size: larger;
   padding-bottom: 1rem;
-}
+} */
 
-.footerDiv .col-3{
+.footerFormDiv .col-3{
   padding: 1rem;
 }
 
-.footerDiv .col-6 p {
+.footerFormDiv .col-6 p {
   padding-top: 1rem;
   margin: 0;
   text-align: left;
 }
 
-.footerDiv .col-6 input {
+.footerFormDiv .col-6 input {
   margin-left: 6rem;
   margin-bottom: 1rem;
   background-color: black;
@@ -157,4 +188,14 @@ border-radius: 1rem;
   border: #6AA8FF solid 1px;
   border-radius: 30% 0;
   padding: 12px;
+}
+
+.navbar-brand img {
+  width: 16%;
+  height: 16%;
+}
+
+.footerDiv {
+  padding: 4%;
+  margin-bottom: 20%;
 }
