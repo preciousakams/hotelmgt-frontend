@@ -21,25 +21,6 @@
   opacity: 90%;
 }
 
-.carousel {
-  display: inline-flex;
-  /* margin: 0 0 30% 35% ; */
-  height: 220px !important;
-  width: 420px !important;
-  margin-bottom: 24rem !important;
-  border: solid ;
-}
-
-.carousel-item {
-  /* display: flex;
-  justify-content: center; */
-border: solid chartreuse;
-}
-
-.carousel-item img{
-  width: auto;
-  height: auto;
-}
 .mainDiv {
   display: flex;
   justify-content: center;
@@ -78,17 +59,6 @@ border: solid chartreuse;
   text-align: center;
 }
 
-.writeup h5,
-.writeup p {
-  display:inline-flex;
-  background: url('../src/img/text-bg.png');
-  /* background-color: white; */
-  opacity: 70%;
-  /* /* background: #4e96f5; */
-  border-radius: 33px;
-  
-}
-
 .writeup h5 {
   font-size: 30px;
 }
@@ -98,40 +68,40 @@ border: solid chartreuse;
   font-style: italic;
 }
 
-.footerFormDiv {
- background-color: white;
-  /* margin-left: 20%; */
-text-align: center;
-font-weight: 500;
-border-radius: 1rem;
+@media screen and (max-width:600px) {
+  /* .writeup {
+    display: flex;
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
+    justify-content: space-around;
+   
+    padding-top: 3rem;
+  } */
+
+  .writeup h5 {
+    font-size: 20px;
+  }
+
+  .writeup p{
+    display: none;
+  }
 }
 
-/* .duration button {
-  border: transparent;
-  background-color: purple;
-  margin: 0;
-  font-size: larger;
-  padding-bottom: 1rem;
-} */
+@media screen and (max-width: 400px) {
+  .writeup {
+    display: flex;
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
 
-.footerFormDiv .col-3{
-  padding: 1rem;
-}
+  }
 
-.footerFormDiv .col-6 p {
-  padding-top: 1rem;
-  margin: 0;
-  text-align: left;
-}
-
-.footerFormDiv .col-6 input {
-  margin-left: 6rem;
-  margin-bottom: 1rem;
-  background-color: black;
-  color: #6AA8FF;
-  border: transparent;
-  font-weight: 600;
-  border-radius: 10px;
+  .writeup h5,
+  .writeup p {
+    font-size: 14px;
+    font-weight: 600;
+  }
 }
 
 .roomCard img {
@@ -191,8 +161,8 @@ border-radius: 1rem;
 }
 
 .navbar-brand img {
-  width: 16%;
-  height: 16%;
+  width: 6rem;
+  height: 6rem;
 }
 
 .footerDiv {
