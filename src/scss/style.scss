@@ -8,7 +8,7 @@
 /* not sure what this does anymore */
 // .navbar-nav button,
 // .bookNowBtn {
-//   color: $light-blue;
+//   color: darken($light-blue, 40%);
 //   border: transparent;
 //   background-color: $black;
 //   font-weight: map-get($font-weights, bold);
@@ -132,7 +132,7 @@
 
 .detailsDiv strong,
 .bookingForm strong {
-  color: $light-blue;
+  color: darken($light-blue, 20%);
 }
 .bookingForm {
   border: $light-blue solid 6px;
