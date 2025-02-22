@@ -1,0 +1,175 @@
+@import './resets';
+@import './variables';
+
+.App {
+  overflow: hidden;
+  height: 100vh;
+}
+/* not sure what this does anymore */
+// .navbar-nav button,
+// .bookNowBtn {
+//   color: $light-blue;
+//   border: transparent;
+//   background-color: $black;
+//   font-weight: map-get($font-weights, bold);
+//   padding: 8px !important;
+//   font-size: map-get($font-sizes, larger);
+//   border-radius: $border;
+// }
+
+@mixin display($content) {
+  display: flex;
+  justify-content: $content;
+}
+
+.mainCon {
+  background: url(../img/grass-luxury-beach-resort-travel.jpg) no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  opacity: 90%;
+}
+
+.mainDiv {
+  @include display(center);
+}
+
+.sideFooter {
+  background-color: $white;
+ width: 4rem !important;
+ font-weight: map-get($font-weights, medium);
+ font-size: map-get($font-sizes, large);
+}
+.mail {
+  writing-mode:$vertical;
+  text-orientation:$mixed-text;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  padding: 2rem 0;
+}
+
+.socials {
+  writing-mode:$vertical;
+  text-orientation:$mixed-text;
+  padding: 2rem 9px;
+  font-size: map-get($font-sizes, 20);
+}
+
+.writeup {
+  padding: 3rem;
+  color: $black;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.writeup h5 {
+  font-size: map-get($font-sizes, 30);
+}
+
+.writeup p {
+  font-size: map-get($font-sizes, 20);
+  font-style: italic;
+}
+
+@media screen and (max-width:600px) {
+  /* .writeup {
+    display: flex;
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
+    justify-content: space-around;
+   
+    padding-top: 3rem;
+  } */
+
+  .writeup h5 {
+    font-size: map-get($font-sizes, 20);
+  }
+
+  .writeup p{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .writeup {
+    display: flex;
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
+
+  }
+
+  .writeup h5,
+  .writeup p {
+    font-size: map-get($font-sizes, 14);
+    font-weight: map-get($font-weights, medium);
+  }
+}
+
+.roomCard img {
+  width: 260px;
+  height: 160px;
+}
+
+.list-group-item {
+  border: transparent !important;
+}
+
+.detailsDiv {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border: transparent;
+}
+
+.detailsDiv img {
+ padding: 6%;
+ height: 36rem;
+}
+
+.detailsDiv strong,
+.bookingForm strong {
+  color: $light-blue;
+}
+.bookingForm {
+  border: $light-blue solid 6px;
+  border-radius: $border;
+}
+
+.bookingForm h3 {
+  text-align: center;
+  padding-top: 1rem;
+  }
+
+.bookingFormDiv {
+  @include display(space-around);
+  padding: 1rem;
+  margin: 1rem;
+  font-size: map-get($font-sizes, larger);
+
+}
+
+.bookingFormDiv label,
+.bookingFormDiv p {
+  padding: 0 1rem;
+}
+
+.bookingFormDiv input {
+  margin: 1rem 0;
+  border: $light-blue solid 1px;
+  border-radius: $border;
+  padding: 12px;
+}
+
+.navbar-brand img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.footerDiv {
+  padding: 4%;
+  margin-bottom: 20%;
+}

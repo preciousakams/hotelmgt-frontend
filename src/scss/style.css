@@ -1,21 +1,17 @@
-.App {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
+}
+
+.App {
+  overflow: hidden;
   height: 100vh;
 }
-.navbar-nav button,
-.bookNowBtn {
-  color: #6AA8FF;
-  border: transparent;
-  background-color: black;
-  font-weight: 800;
-  padding: 8px !important;
-  font-size: larger;
-  border-radius: 30% 0;
-}
+
+/* not sure what this does anymore */
 .mainCon {
-  background: url(../src/img/grass-luxury-beach-resort-travel.jpg) no-repeat;
+  background: url(../img/grass-luxury-beach-resort-travel.jpg) no-repeat;
   background-size: 100% 100%;
   height: 100%;
   opacity: 90%;
@@ -28,28 +24,22 @@
 
 .sideFooter {
   background-color: white;
- padding: 0;
- margin: 0;
- width: 4rem !important;
- font-weight: 600;
- font-size: large;
+  width: 4rem !important;
+  font-weight: 600;
+  font-size: large;
 }
+
 .mail {
-  writing-mode:vertical-lr;
-  text-orientation:mixed;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
   transform: rotate(180deg);
   padding: 2rem 0;
 }
 
 .socials {
-  writing-mode:vertical-lr;
-  text-orientation:mixed;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
   padding: 2rem 9px;
-  font-size: 20px;
 }
 
 .writeup {
@@ -59,51 +49,36 @@
   text-align: center;
 }
 
-.writeup h5 {
-  font-size: 30px;
-}
-
 .writeup p {
-  font-size: 20px;
   font-style: italic;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   /* .writeup {
     display: flex;
     position: absolute;
     top: 6rem;
     left: 3rem;
     justify-content: space-around;
-   
+
     padding-top: 3rem;
   } */
-
-  .writeup h5 {
-    font-size: 20px;
-  }
-
-  .writeup p{
+  .writeup p {
     display: none;
   }
 }
-
 @media screen and (max-width: 400px) {
   .writeup {
     display: flex;
     position: absolute;
     top: 6rem;
     left: 3rem;
-
   }
-
   .writeup h5,
   .writeup p {
-    font-size: 14px;
     font-weight: 600;
   }
 }
-
 .roomCard img {
   width: 260px;
   height: 160px;
@@ -121,14 +96,15 @@
 }
 
 .detailsDiv img {
- padding: 6%;
- height: 36rem;
+  padding: 6%;
+  height: 36rem;
 }
 
 .detailsDiv strong,
 .bookingForm strong {
   color: #6AA8FF;
 }
+
 .bookingForm {
   border: #6AA8FF solid 6px;
   border-radius: 30% 0%;
@@ -137,7 +113,7 @@
 .bookingForm h3 {
   text-align: center;
   padding-top: 1rem;
-  }
+}
 
 .bookingFormDiv {
   display: flex;
@@ -145,7 +121,6 @@
   padding: 1rem;
   margin: 1rem;
   font-size: larger;
-
 }
 
 .bookingFormDiv label,
@@ -156,7 +131,7 @@
 .bookingFormDiv input {
   margin: 1rem 0;
   border: #6AA8FF solid 1px;
-  border-radius: 30% 0;
+  border-radius: 30% 0%;
   padding: 12px;
 }
 
@@ -168,4 +143,4 @@
 .footerDiv {
   padding: 4%;
   margin-bottom: 20%;
-}
+}/*# sourceMappingURL=style.css.map */
