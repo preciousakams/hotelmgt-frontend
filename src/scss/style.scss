@@ -3,7 +3,7 @@
 
 .App {
   overflow: hidden;
-  height: 100vh;
+  // height: 100vh;
 }
 /* not sure what this does anymore */
 // .navbar-nav button,
@@ -25,7 +25,7 @@
 .mainCon {
   background: url(../img/grass-luxury-beach-resort-travel.webp) no-repeat;
   background-size: 100% 100%;
-  height: 100%;
+  height: 80vh;
   opacity: 90%;
 }
 
@@ -172,4 +172,17 @@
 .footerDiv {
   padding: 4%;
   margin-bottom: 20%;
+}
+
+.carousel-container {
+  height: 60%;
+  width: 100%;
+}
+.carouselCard {
+  background: transparent;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  
 }

@@ -31,7 +31,8 @@ const CarouselDiv = () => {
     keyBoardControl
     customTransition="all .5"
     transitionDuration={500}
-    containerClass="carousel-container ms-2 me-2 pt-2 pb-2"
+    // containerClass="carousel-container ms-2 me-2 pt-2 pb-2"
+    containerClass="carousel-container"
     deviceType={responsive.deviceType}
     partialVisible
     swipeable
@@ -43,16 +44,16 @@ const CarouselDiv = () => {
     
 
   >
-    <div className="card h-100 border-0 bg-transparent p-3">
+    <div className="card carouselCard">
     <img src="https://res.cloudinary.com/wonderwoman/image/upload/v1733604781/myportfolio/wonderHotels/single.jpg" className="card-img-top rounded-4 img-fluid" alt="room slide" />
     </div>
-    <div className="card h-100 border-0 bg-transparent p-3">
+    <div className="card carouselCard">
     <img src="https://res.cloudinary.com/wonderwoman/image/upload/v1733604788/myportfolio/wonderHotels/suite.jpg" className="card-img-top rounded-4 img-fluid" alt="room slide" />
     </div>
-    <div className="card h-100 border-0 bg-transparent p-3">
+    <div className="card carouselCard">
     <img src="https://res.cloudinary.com/wonderwoman/image/upload/v1733604781/myportfolio/wonderHotels/deluxe-suite.jpg" className="card-img-top rounded-4 img-fluid" alt="room slide" />
     </div>
-    <div className="card h-100 border-0 bg-transparent p-3">
+    <div className="card carouselCard">
     <img src="https://res.cloudinary.com/wonderwoman/image/upload/v1733604777/myportfolio/wonderHotels/double1.jpg" className="card-img-top rounded-4 img-fluid" alt="room slide" />
     </div>
     

@@ -31,7 +31,7 @@ const Home = () => {
         
         </div>
    
-        <div className="row">
+        <div className="row carouselRow">
           <div className="col-1 sideFooter"></div>
           <div className="col-10">
             <CarouselDiv />
